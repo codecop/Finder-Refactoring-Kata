@@ -7,12 +7,11 @@ Refactoring exercise focusing on naming.
 
 ## Introduction
 
-Here is the bad news: the new developer you hired has written some terrible, atrocious code.
-No one can understand what it does.
+Here's a challenge: there's some code in the repository that might benefit from refactoring and improved readability.
 
-The good news: at least there are unit tests to prove the code is working.
+The silver lining: there are already unit tests in place to ensure the code functions correctly.
 
-You job is to refactor the code and make it readable, while keeping the code in working order (pass all tests).
+Your job is to enhance the code's readability while ensuring it remains functional (pass all tests).
 
 ## How To Start
 
