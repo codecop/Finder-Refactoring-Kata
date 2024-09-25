@@ -13,6 +13,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VSTEST_CONNECTION_TIMEOUT: 180000
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -32,4 +34,4 @@ jobs:
 
     - name: Test
       working-directory: CS
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --diag log.txt
