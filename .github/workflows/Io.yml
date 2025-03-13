@@ -29,4 +29,4 @@ jobs:
 
     - name: Test
       working-directory: Io
-      run: Io ./tests/correctness/run.io
+      run: io ./tests/correctness/run.io
