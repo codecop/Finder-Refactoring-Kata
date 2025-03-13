@@ -1,0 +1,32 @@
+name: Test c_cmocka
+
+on:
+  push:
+    paths:
+      - 'c_cmocka/**'
+      - '.github/workflows/c_cmocka.yml'
+  pull_request:
+    paths:
+      - 'c_cmocka/**'
+      - '.github/workflows/c_cmocka.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
+    - name: Build
+      working-directory: c_cmocka
+      run: |
+        mkdir build
+        cd build
+        cmake -G "Unix Makefiles" ..
+        cmake --build .
+
+    - name: Test
+      working-directory: c_cmocka
+      run: |
+        cd build
+        ./finder_test

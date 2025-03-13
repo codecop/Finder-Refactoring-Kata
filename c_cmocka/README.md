@@ -9,7 +9,7 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 ## How To Start
 
-1. This is a C99 port of the code. It uses [cmocka](https://cmocka.org/).
+1. This is a C99 port of the code. It uses [CMocka framework](https://api.cmocka.org/).
 
 2. Run the tests to make sure everything works.
 
@@ -17,7 +17,7 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 ## Goal
 
-The primary goal is to refactor the code in `finder.c` - as it stands the code is incomprehensible.
+The primary goal is to refactor the code in `src/finder.c` - as it stands the code is incomprehensible.
 
 ## Tips
 
@@ -34,10 +34,3 @@ Lean on the tests and run them after every small change to make sure you are on 
 ## How to End
 
 You can stop when you feel the code is good enough, something you can come back to in 6 months and understand.
-
-
-C version
-=========
-
-The production code in "src" is in C. The test code is in the 'test-cmocka' folder using the [CMocka framework](https://api.cmocka.org/).
-
