@@ -29,4 +29,4 @@ jobs:
       working-directory: c_cmocka
       run: |
         cd build
-        ./finder_test
+        ./test-cmocka/finder_test/finder_test
