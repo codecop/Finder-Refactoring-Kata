@@ -1,0 +1,15 @@
+{
+  "name": "algorithm-refactoring",
+  "version": "0.1.0",
+  "description": "Incomprehensible Finder Refactoring Kata created by K. Scott Allen.",
+  "author": "Peter 'Code Cop' Kofler",
+  "website": "",
+  "readme": "README.md",
+  "protos": [ "Finder" ],
+  "dependencies": {
+    "libs": [],
+    "headers": [],
+    "protos": [],
+    "packages": []
+  }
+}
