@@ -1,28 +1,29 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import algorithm.F;
 import algorithm.FT;
 import algorithm.Finder;
 import algorithm.Thing;
 
-public class FinderTests {
+class FinderTests {
 
     Thing sue = new Thing();
     Thing greg = new Thing();
     Thing sarah = new Thing();
     Thing mike = new Thing();
 
-    @Before
-    public void setup() {
+    @BeforeEach
+    void setup() {
         sue.name = "Sue";
         sue.birthDate = new Date(50, 0, 1);
         greg.name = "Greg";
@@ -34,18 +35,18 @@ public class FinderTests {
     }
 
     @Test
-    public void returns_Empty_Results_When_Given_Empty_List() {
+    void returns_Empty_Results_When_Given_Empty_List() {
         List<Thing> list = new ArrayList<>();
         Finder finder = new Finder(list);
 
         F result = finder.Find(FT.One);
 
-        assertEquals(null, result.P1);
-        assertEquals(null, result.P2);
+        assertNull(result.P1);
+        assertNull(result.P2);
     }
 
     @Test
-    public void returns_Empty_Results_When_Given_One_FT() {
+    void returns_Empty_Results_When_Given_One_FT() {
         List<Thing> list = new ArrayList<>();
         list.add(sue);
 
@@ -53,12 +54,12 @@ public class FinderTests {
 
         F result = finder.Find(FT.One);
 
-        assertEquals(null, result.P1);
-        assertEquals(null, result.P2);
+        assertNull(result.P1);
+        assertNull(result.P2);
     }
 
     @Test
-    public void returns_One_Two_For_Two_FTs() {
+    void returns_One_Two_For_Two_FTs() {
         List<Thing> list = new ArrayList<>();
         list.add(sue);
         list.add(greg);
@@ -71,7 +72,7 @@ public class FinderTests {
     }
 
     @Test
-    public void returns_Two_Two_For_Two_FTs() {
+    void returns_Two_Two_For_Two_FTs() {
         List<Thing> list = new ArrayList<>();
         list.add(mike);
         list.add(greg);
@@ -84,7 +85,7 @@ public class FinderTests {
     }
 
     @Test
-    public void returns_Two_Two_For_Four_FTs() {
+    void returns_Two_Two_For_Four_FTs() {
         List<Thing> list = new ArrayList<>();
         list.add(sue);
         list.add(sarah);
@@ -99,7 +100,7 @@ public class FinderTests {
     }
 
     @Test
-    public void returns_One_Two_For_Four_FTs() {
+    void returns_One_Two_For_Four_FTs() {
         List<Thing> list = new ArrayList<>();
         list.add(sue);
         list.add(sarah);
