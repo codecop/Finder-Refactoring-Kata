@@ -17,7 +17,7 @@ jobs:
       VSTEST_CONNECTION_TIMEOUT: 180000
     steps:
     - name: Check out the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v7
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v6.0.0

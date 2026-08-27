@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out the repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v7
 
     - name: Set up Ada
       run: sudo apt-get update && sudo apt-get install gnat gprbuild
